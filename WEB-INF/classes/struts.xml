@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+	<package name="liu" extends="struts-default">
+		<global-results>
+			<result name="succeed">/common/succeed.jsp</result>
+			<result name="successAdd">/common/add_success.jsp</result>
+			<result name="successDel">/common/del_success.jsp</result>
+			<result name="successUpdate">/common/update_success.jsp</result>
+		</global-results>
+
+		<action name="upload" class="com.util.upload" method="upload">
+			<result name="success">/upload/upload_re.jsp</result>
+		</action>
+
+		<action name="login" class="adminAction" method="login">
+			<result name="yes">/index.jsp</result>
+			<result name="no">/login.jsp</result>
+		</action>
+		<action name="loginout" class="adminAction" method="loginout">
+			<result name="success">/login.jsp</result>
+		</action>
+		
+		<action name="adminupdatepwd" class="adminAction" method="adminupdatepwd">
+			<result name="success">/admin/adminupdatepwd.jsp</result>
+		</action>
+		
+		
+		<!-- 学生开始 -->
+		<action name="stumana" class="stuAction" method="mana">
+			<result name="success">/stulist.jsp</result>
+		</action>
+		<action name="stumana2" class="stuAction" method="mana2">
+			<result name="success">/stulist2.jsp</result>
+		</action>
+		<action name="stuadd" class="stuAction" method="add">
+		</action>
+		<action name="exceladd" class="stuAction" method="exceladd">
+		</action>
+		<action name="stumodifybefore" class="stuAction" method="modifybefore">
+			<result name="success">/stumodify.jsp</result>
+		</action>
+		<action name="selfmodifybefore" class="stuAction" method="selfmodifybefore">
+			<result name="success">/selfmodify.jsp</result>
+		</action>
+		<action name="stumodify" class="stuAction" method="modify">
+		</action>
+		<action name="selfmodify" class="stuAction" method="selfmodify">
+		</action>
+		<action name="studel" class="stuAction" method="del">
+		</action>
+		<!-- 学生结束 -->
+		<action name="ggmana" class="ggAction" method="mana">
+			<result name="success">/gglist.jsp</result>
+		</action>
+		<action name="ggmana2" class="ggAction" method="mana2">
+			<result name="success">/gglist2.jsp</result>
+		</action>
+		
+		<action name="ggmodifybefore" class="ggAction" method="modifybefore">
+			<result name="success">/ggmodify.jsp</result>
+		</action>
+		
+		<action name="ggadd" class="ggAction" method="add">
+		</action>
+		<action name="ggdel" class="ggAction" method="del">
+		</action>
+		<action name="ggmodify" class="ggAction" method="modify">
+		</action>
+		
+		<action name="lymana" class="lyAction" method="mana">
+			<result name="success">/lylist.jsp</result>
+		</action>
+		<action name="lymana2" class="lyAction" method="mana2">
+			<result name="success">/lylist2.jsp</result>
+		</action>
+		<action name="lyadd" class="lyAction" method="add">
+		</action>
+		<action name="lydel" class="lyAction" method="del">
+		</action>
+		<action name="lydel2" class="lyAction" method="del2">
+		</action>
+		
+	</package>
+</struts>
